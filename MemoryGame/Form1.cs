@@ -37,7 +37,6 @@ namespace MemoryGame
             Properties.Resources.img10
         };
 
-
         private int tries = 0;
         private int totalSeconds = 0;
         PictureBox first, second;
@@ -50,9 +49,7 @@ namespace MemoryGame
         public Form1()
         {
             InitializeComponent();
-        }
-
-        
+        }        
 
         private void Tags(int index)
         {
@@ -121,10 +118,8 @@ namespace MemoryGame
         }
 
 
-
         private void picture_Click(object sender, EventArgs e)
-        {
-            
+        {       
 
             if (!totalTimer.Enabled)
             {
@@ -177,7 +172,7 @@ namespace MemoryGame
             Size temp = defaultSize;
 
 
-            for (int w = defaultSize.Width; w >= 0; w -= 5)
+            for (int w = defaultSize.Width; w >= 0; w -= 10)
             {
                 temp.Width = w;
                 picture.Size = temp;
@@ -187,7 +182,7 @@ namespace MemoryGame
             }
 
 
-            for (int w = temp.Width; w <= defaultSize.Width; w += 5)
+            for (int w = temp.Width; w <= defaultSize.Width; w += 10)
             {
                 temp.Width = w;
                 picture.Size = temp;
