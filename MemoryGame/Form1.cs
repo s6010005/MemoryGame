@@ -176,23 +176,24 @@ namespace MemoryGame
             Size defaultSize = picture.Size;
             Size temp = defaultSize;
 
-            for (int w = defaultSize.Width; w > 0; w -= 2)
+
+            for (int w = defaultSize.Width; w >= 0; w -= 5)
             {
                 temp.Width = w;
                 picture.Size = temp;
                 picture.BackgroundImage = null;
                 picture.Refresh();
-                Thread.Sleep(5);
+                Thread.Sleep(10);
             }
 
 
-            for (int w = temp.Width; w < defaultSize.Width; w += 2)
+            for (int w = temp.Width; w <= defaultSize.Width; w += 5)
             {
                 temp.Width = w;
                 picture.Size = temp;
                 picture.BackgroundImage = null;
                 picture.Refresh();
-                Thread.Sleep(5);
+                Thread.Sleep(10);
             }
         }
 
